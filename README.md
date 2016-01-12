@@ -51,13 +51,13 @@ $ docker-compose up -d
 
 Load the following URLs in a browser:
 
-* Mesos Master UI: http://localdocker:5050/
-* Marathon UI: http://localdocker:8080/
+* Mesos Master UI: [http://localdocker:5050/](http://localdocker:5050/)
+* Marathon UI: [http://localdocker:8080/](http://localdocker:8080/)
 
 To stop the cluster:
 
 ```
-docker-compose stop
+$ docker-compose stop
 ```
 
 ## Deploying a test app via the Marathon API:
