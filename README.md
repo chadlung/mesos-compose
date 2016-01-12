@@ -41,6 +41,10 @@ Add the following line (adjust to the IP on your machine based on the DOCKER_HOS
 
 Save and exit the file.
 
+**Note:** If you plan to add more slaves (now called agents) or Chronos you will
+probably want to ensure your host VM has additional memory allocated to it. I set
+mine at 4096 MB (in Virtualbox).
+
 ## Usage
 
 Run the Mesos cluster:
