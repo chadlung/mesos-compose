@@ -13,12 +13,14 @@ This Docker Compose config borrows ideas and code from:
 
 ## Special instructions for Mac OS X users
 
-**Note:** This assumes your vbox name for your docker-machine vm is called **default**.
+**Note:** This assumes your vbox name for your Docker-Machine VM is called **default**.
+Also assumes you are using VirtualBox.
 
-Ensure the DNS resolves on the host machine:
+Ensure the DNS resolves on the host machine. This should be a one time thing
+unless you recreate your host VM.
 
 ```
-$ VBoxManage modifyvm default  --natdnshostresolver1 on
+$ VBoxManage modifyvm default --natdnshostresolver1 on
 ```
 
 Start the Docker host VM and then get the IP of the Docker host
