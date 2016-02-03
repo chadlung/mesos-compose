@@ -40,18 +40,10 @@ export DOCKER_HOST="tcp://192.168.99.100:2376"
 Update the **hosts** file:
 
 ```
-$ sudo nano /etc/hosts
+$ TMP_DOCKER_HOST=${DOCKER_HOST##*/}
+$ TMP_DOCKER_HOST=${TMP_DOCKER_HOST%:*}
+$ echo "${TMP_DOCKER_HOST} localdocker" | sudo tee -a /etc/hosts
 ```
-
-**Note:** The Docker host IP can change so you may need to change this as needed.
-
-Add the following line (adjust to the IP on your machine based on the DOCKER_HOST)
-
-```
-192.168.99.100  localdocker
-```
-
-Save and exit the file.
 
 **Note:** If you plan to add more slaves (now called agents) or Chronos you will
 probably want to ensure your host VM has additional memory allocated to it. I set
